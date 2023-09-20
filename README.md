@@ -39,8 +39,10 @@ Describe the permissions string: <br/>
 For example, the file permissions for project_t.txt are -rw-rw-r--. Since the first character is a hyphen (-), this indicates that project_t.txt is a file, not a directory. The second, fifth, and eighth characters are all r, which indicates that user, group, and other all have read permissions. The third and sixth characters are w, which indicates that only the user and group have write permissions. No one has execute permissions for project_t.txt.
  
 <p align="center">
-Check file and directory details: <br/>
- The following code demonstrates how I used Linux commands to determine the existing permissions set for a specific directory in the file system.
+Change file permissions: <br/>
+ 
+The organization determined that other shouldn't have write access to any of their files. To comply with this, I referred to the file permissions that I previously returned. I determined project_k.txt must have the write access removed for other.
+The following code demonstrates how I used Linux commands to do this:
  <br/>
  <br/>
 <img src="https://i.imgur.com/dPlSonb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
