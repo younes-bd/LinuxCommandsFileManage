@@ -41,18 +41,23 @@ For example, the file permissions for project_t.txt are -rw-rw-r--. Since the fi
 <p align="center">
 Change file permissions: <br/>
  
-The organization determined that other shouldn't have write access to any of their files. To comply with this, I referred to the file permissions that I previously returned. I determined project_k.txt must have the write access removed for other.
+The organization determined that other shouldn't have write access to any of their files. To comply with this, I referred to the file permissions that I previously returned. I determined project_k.txt must have the write access removed for other. <br/>
 The following code demonstrates how I used Linux commands to do this:
  <br/>
  <br/>
-<img src="https://i.imgur.com/dPlSonb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
- 
+<img src="https://i.imgur.com/A0Qu5hb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ <br/>
+The first two lines of the screenshot display the commands I entered, and the other lines display the output of the second command. The chmod command changes the permissions on files and directories. The first argument indicates what permissions should be changed, and the second argument specifies the file or directory. In this example, I removed write permissions from other for the project_k.txt file. After this, I used ls -la to review the updates I made.
+
 <p align="center">
-Check file and directory details: <br/>
- The following code demonstrates how I used Linux commands to determine the existing permissions set for a specific directory in the file system.
+Change file permissions on a hidden file: <br/>
+ 
+The research team at my organization recently archived project_x.txt. They do not want anyone to have write access to this project, but the user and group should have read access. <br/>
+The following code demonstrates how I used Linux commands to change the permissions:
  <br/>
- <br/>
- <img src="https://i.imgur.com/dPlSonb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ <img src="https://i.imgur.com/EPXXLNY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br/>
+The first two lines of the screenshot display the commands I entered, and the other lines display the output of the second command. I know .project_x.txt is a hidden file because it starts with a period (.). In this example, I removed write permissions from the user and group, and added read permissions to the group. I removed write permissions from the user with u-w. Then, I removed write permissions from the group with g-w, and added read permissions to the group with g+r. 
  
 <p align="center">
 Check file and directory details: <br/>
