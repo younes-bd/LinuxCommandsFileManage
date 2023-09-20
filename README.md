@@ -54,9 +54,9 @@ Change file permissions on a hidden file: <br/>
  
 The research team at my organization recently archived project_x.txt. They do not want anyone to have write access to this project, but the user and group should have read access. <br/>
 The following code demonstrates how I used Linux commands to change the permissions:
- <br/>
- <br/>
- <img src="https://i.imgur.com/xdJrvGr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br/>
+<br/>
+ <img src="https://i.imgur.com/EPXXLNY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br/>
 The first two lines of the screenshot display the commands I entered, and the other lines display the output of the second command. I know .project_x.txt is a hidden file because it starts with a period (.). In this example, I removed write permissions from the user and group, and added read permissions to the group. I removed write permissions from the user with u-w. Then, I removed write permissions from the group with g-w, and added read permissions to the group with g+r. 
  
@@ -67,7 +67,7 @@ My organization only wants the researcher2 user to have access to the drafts dir
 The following code demonstrates how I used Linux commands to change the permissions:
 <br/>
 <br/>
- <img src="https://i.imgur.com/dPlSonb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ <img src="https://i.imgur.com/xdJrvGr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
 <p align="center">
 Check file and directory details: <br/>
