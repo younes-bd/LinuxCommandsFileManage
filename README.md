@@ -70,18 +70,12 @@ The following code demonstrates how I used Linux commands to change the permissi
  <img src="https://i.imgur.com/xdJrvGr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
 <p align="center">
-Check file and directory details: <br/>
- The following code demonstrates how I used Linux commands to determine the existing permissions set for a specific directory in the file system.
- <br/>
- <br/>
- <img src="https://i.imgur.com/dPlSonb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Summary: <br/>
  
-<p align="center">
-Check file and directory details: <br/>
- The following code demonstrates how I used Linux commands to determine the existing permissions set for a specific directory in the file system.
+I changed multiple permissions to match the level of authorization my organization wanted for files and directories in the projects directory. The first step in this was using ls -la to check the permissions for the directory. This informed my decisions in the following steps. I then used the chmod command multiple times to change the permissions on files and directories.
  <br/>
  <br/>
- <img src="https://i.imgur.com/dPlSonb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
  
 <!--
  ```diff
