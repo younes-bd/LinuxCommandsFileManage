@@ -18,7 +18,7 @@ The research team at my organization needs to update the file permissions for ce
 
 <p align="center">
 Launch the utility: <br/>
-<img src="https://imgur.com/a/JIC7Br4" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/a/JIC7Br4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Check file and directory details: <br/>
