@@ -21,7 +21,7 @@ Check file and directory details: <br/>
  The following code demonstrates how I used Linux commands to determine the existing permissions set for a specific directory in the file system.
  <br/>
  <br/>
- 
+ <img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <p align="center">
 Check file and directory details: <br/>
  The following code demonstrates how I used Linux commands to determine the existing permissions set for a specific directory in the file system.
