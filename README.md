@@ -72,11 +72,8 @@ As a cybersecurity analyst, you were tasked with performing a vulnerability asse
 
 Linux Commands:
 ```
-bash
-Copy code
 # Start Nessus in a Docker container (if Docker is used)
 docker run -d --name nessus -p 8834:8834 -e "NESSUS_LICENSE=your-activation-code" nessus/nessus
-
 # Open a web browser and navigate to Nessus web interface
 # Login to the Nessus web interface, configure the scan, and initiate the vulnerability scan
 ```
@@ -90,9 +87,7 @@ Description:
 Your organization needs to apply security patches to a Linux server to address known vulnerabilities and improve system security.
 
 Linux Commands:
-
-bash
-Copy code
+```
 # Update package repositories
 sudo apt update
 
@@ -107,7 +102,7 @@ sudo apt install package-name
 
 # Apply kernel security updates
 sudo reboot
-
+```
 Summary:
 In this project, we focused on enhancing system security by applying security patches to a Linux server. We began by updating the package repositories and upgrading installed packages to ensure all security patches were in place. This proactive approach helps safeguard our systems against known vulnerabilities.
 
