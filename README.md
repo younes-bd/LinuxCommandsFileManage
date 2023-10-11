@@ -64,7 +64,124 @@ I changed multiple permissions to match the level of authorization my organizati
  <br/>
  <br/>
 
- 
+
+ Vulnerability Scanning with Nessus
+
+Description:
+As a cybersecurity analyst, you were tasked with performing a vulnerability assessment on your organization's internal network using the Nessus vulnerability scanner.
+
+Linux Commands:
+
+bash
+Copy code
+# Start Nessus in a Docker container (if Docker is used)
+docker run -d --name nessus -p 8834:8834 -e "NESSUS_LICENSE=your-activation-code" nessus/nessus
+
+# Open a web browser and navigate to Nessus web interface
+# Login to the Nessus web interface, configure the scan, and initiate the vulnerability scan
+
+Summary:
+This project involved setting up and running a Nessus vulnerability scan to identify potential security issues within our organization's network. The Nessus scanner was deployed within a Docker container for ease of use. By conducting this scan, we gained insights into vulnerabilities and areas for security improvement.
+
+
+Security Patch Management
+
+Description:
+Your organization needs to apply security patches to a Linux server to address known vulnerabilities and improve system security.
+
+Linux Commands:
+
+bash
+Copy code
+# Update package repositories
+sudo apt update
+
+# Upgrade installed packages, applying available security patches
+sudo apt upgrade
+
+# Review available security patches
+sudo apt list --upgradable
+
+# Install specific security updates
+sudo apt install package-name
+
+# Apply kernel security updates
+sudo reboot
+
+Summary:
+In this project, we focused on enhancing system security by applying security patches to a Linux server. We began by updating the package repositories and upgrading installed packages to ensure all security patches were in place. This proactive approach helps safeguard our systems against known vulnerabilities.
+
+Security Hardening with IPTables
+
+Description:
+You're tasked with configuring IPTables to restrict network traffic on a Linux server. Security hardening includes allowing only necessary services and blocking others.
+
+Linux Commands:
+
+bash
+Copy code
+# Allow SSH (replace xx.xx.xx.xx with your IP)
+sudo iptables -A INPUT -p tcp --dport 22 -s xx.xx.xx.xx -j ACCEPT
+
+# Allow HTTP and HTTPS traffic
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+
+# Drop all other incoming traffic
+sudo iptables -A INPUT -j DROP
+
+# Save the rules
+sudo iptables-save > /etc/iptables.rules
+
+# Enable IPTables on boot
+sudo systemctl enable netfilter-persistent
+Summary:
+This project focused on enhancing network security through the configuration of IPTables on a Linux server. By explicitly allowing only necessary services and blocking all other incoming traffic, we reduce the attack surface and fortify our system against potential threats.
+
+System Log Analysis
+
+Description:
+You've been monitoring system logs to detect unusual activities and potential security incidents. This is a critical task for a cybersecurity analyst.
+
+Linux Commands:
+
+bash
+Copy code
+# Check the system logs (e.g., syslog)
+cat /var/log/syslog
+
+# Search for specific keywords (e.g., 'suspicious activity')
+grep 'suspicious activity' /var/log/syslog
+
+# Analyze authentication logs
+cat /var/log/auth.log
+
+# Monitor real-time logs
+tail -f /var/log/syslog
+Summary:
+In this project, we delved into system log analysis, a vital aspect of cybersecurity monitoring. We examined various system logs, searched for specific keywords, and monitored real-time logs to identify potential security incidents and unusual activities. This ongoing monitoring is essential for maintaining a secure environment.
+
+Intrusion Detection with Snort
+
+Description:
+You've configured Snort, an intrusion detection system, to monitor network traffic for signs of suspicious or malicious activity.
+
+Linux Commands:
+
+bash
+Copy code
+# Start Snort in IDS mode with a specific configuration file
+sudo snort -q -A console -q -c /etc/snort/snort.conf -i eth0
+
+# Analyze Snort logs for alerts
+cat /var/log/snort/alert
+
+# Review Snort rules and customize for your network
+sudo nano /etc/snort/rules/local.rules
+
+Summary:
+This project revolved around setting up and configuring Snort, an intrusion detection system, to monitor network traffic for signs of suspicious or malicious activity. By analyzing Snort logs and customizing rules, we enhance our network's security posture and strengthen our ability to detect and respond to potential intrusions.
+
 <!--
  ```diff
 - text in red
