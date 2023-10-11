@@ -71,7 +71,7 @@ Description:
 As a cybersecurity analyst, you were tasked with performing a vulnerability assessment on your organization's internal network using the Nessus vulnerability scanner.
 
 Linux Commands:
-
+```
 bash
 Copy code
 # Start Nessus in a Docker container (if Docker is used)
@@ -79,7 +79,7 @@ docker run -d --name nessus -p 8834:8834 -e "NESSUS_LICENSE=your-activation-code
 
 # Open a web browser and navigate to Nessus web interface
 # Login to the Nessus web interface, configure the scan, and initiate the vulnerability scan
-
+```
 Summary:
 This project involved setting up and running a Nessus vulnerability scan to identify potential security issues within our organization's network. The Nessus scanner was deployed within a Docker container for ease of use. By conducting this scan, we gained insights into vulnerabilities and areas for security improvement.
 
