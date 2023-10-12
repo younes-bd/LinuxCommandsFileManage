@@ -184,8 +184,7 @@ Your organization requested a network scan to identify open ports and services o
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Scan a target host for open ports
 nmap target-host
 
@@ -197,6 +196,7 @@ nmap -p 80-100 target-host
 
 # Save the scan results to a file
 nmap -oN scan-results.txt target-host
+```
 Summary:
 This project involved conducting a network scan on a target host using Nmap. The scan revealed open ports and services on the target, providing valuable insights into potential vulnerabilities. The results were saved for further analysis and to assist in securing the network.
 
@@ -207,8 +207,7 @@ Your task was to enhance the security of a Linux server by configuring SSH (Secu
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Generate an SSH key pair (if not already generated)
 ssh-keygen -t rsa
 
@@ -223,6 +222,8 @@ PasswordAuthentication no
 
 # Restart the SSH service to apply changes
 sudo systemctl restart ssh
+```
+
 Summary:
 In this project, the focus was on improving server security by configuring SSH for key-based authentication and disabling password-based logins. These measures bolstered the server's security posture, making it less vulnerable to unauthorized access.
 
@@ -233,8 +234,7 @@ Your organization conducted an incident response simulation to test the effectiv
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Simulate a security incident by creating a test file
 touch /var/test-incident-file.txt
 
@@ -243,6 +243,8 @@ echo "Unauthorized access detected" >> /var/log/security.log
 
 # Execute the incident response plan
 Follow predefined procedures for incident containment, investigation, and recovery
+```
+
 Summary:
 In this incident response simulation, you practiced the initial steps taken in response to a security incident. By creating a test incident file and generating corresponding log entries, you assessed the effectiveness of the incident response plan and made improvements as needed.
 
@@ -253,8 +255,7 @@ You were tasked with analyzing a suspicious file to determine its origin and whe
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Create a copy of the suspicious file for analysis
 cp suspicious-file /var/forensics/
 
@@ -265,6 +266,7 @@ file /var/forensics/suspicious-file
 
 # Review system logs for any related activities
 cat /var/log/auth.log
+```
 Summary:
 This project involved conducting a forensic analysis of a suspicious file to identify potential security risks. By using Linux commands and forensic tools, you gained insights into the file's content and origin, aiding in the organization's security decision-making.
 
@@ -275,8 +277,7 @@ Your task was to implement SELinux (Security-Enhanced Linux) policies to enhance
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Check the current SELinux status
 sestatus
 
@@ -289,6 +290,7 @@ sudo semanage permissive -a httpd_t
 # Apply SELinux policies and relabel the file system
 sudo touch /.autorelabel
 sudo reboot
+```
 
 Summary:
 In this project, you focused on improving endpoint security by implementing SELinux policies. By controlling access for specific processes, you strengthened security controls and enhanced the overall security of Linux systems.
