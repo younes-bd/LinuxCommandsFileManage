@@ -301,9 +301,7 @@ Description:
 Your organization required a critical security patch to be applied to the Linux kernel to address a known vulnerability.
 
 Linux Commands:
-
-bash
-Copy code
+```
 # Check the current kernel version
 uname -r
 
@@ -322,6 +320,7 @@ make && make modules_install && make install
 
 # Reboot the system to load the new kernel
 reboot
+```
 Summary:
 In this project, you demonstrated your ability to apply a critical security patch to the Linux kernel, thus addressing a known vulnerability and enhancing the system's security.
 
@@ -331,9 +330,7 @@ Description:
 Your task was to set up an IDS (Intrusion Detection System) on a Linux server to monitor network traffic for potential security threats.
 
 Linux Commands:
-
-bash
-Copy code
+```
 # Install the Snort IDS system
 sudo apt-get install snort
 
@@ -344,6 +341,7 @@ sudo nano /etc/snort/rules/local.rules
 # Start the Snort IDS service
 sudo systemctl start snort
 sudo systemctl enable snort
+```
 Summary:
 In this project, you successfully configured an IDS on a Linux server, allowing it to monitor network traffic for suspicious activity and potential security threats. This is a crucial step in enhancing network security.
 
@@ -354,8 +352,7 @@ Your organization needed to improve its security monitoring by analyzing log fil
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Collect and analyze system logs
 grep "Unauthorized access" /var/log/auth.log
 grep "malware detected" /var/log/syslog
@@ -365,6 +362,8 @@ nano analyze-logs.sh
 
 # Automate log analysis with cron jobs
 crontab -e
+```
+
 Summary:
 This project focused on setting up log analysis processes on a Linux system to monitor for unauthorized access and malware detection. By creating custom log analysis scripts and automating the analysis, you improved security monitoring capabilities.
 
@@ -375,8 +374,7 @@ You were tasked with enhancing the security of SSH by modifying its configuratio
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Edit SSH server configuration
 sudo nano /etc/ssh/sshd_config
 
@@ -392,6 +390,8 @@ MaxAuthTries 3
 
 # Restart the SSH service to apply changes
 sudo systemctl restart ssh
+```
+
 Summary:
 In this project, you improved the security of SSH by modifying its configuration to disable root logins, set an idle timeout, and implement rate-limiting for login attempts. These measures enhance the security of remote access to the system.
 
@@ -402,8 +402,7 @@ Your organization needed to conduct a security compliance audit on Linux servers
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Install Lynis, a security auditing tool
 wget https://cisofy.com/files/lynis-3.x.x.tar.gz
 tar -xvf lynis-3.x.x.tar.gz
@@ -414,6 +413,8 @@ sudo ./lynis audit system
 
 # Review the audit report for findings and recommendations
 cat /var/log/lynis-report.dat
+```
+
 Summary:
 This project involved using Lynis, a security auditing tool, to conduct a comprehensive audit of Linux systems. The audit report provided valuable insights into vulnerabilities and recommendations for improving security and compliance.
 
@@ -424,8 +425,7 @@ Your organization required sensitive data on Linux servers to be encrypted to pr
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Install encryption tools (e.g., LUKS)
 sudo apt-get install cryptsetup
 
@@ -440,6 +440,8 @@ sudo mkfs.ext4 /dev/mapper/encrypted-volume
 
 # Mount the encrypted volume
 sudo mount /dev/mapper/encrypted-volume /mnt/encrypted-data
+```
+
 Summary:
 This project involved implementing disk encryption on Linux servers to protect sensitive data. By creating an encrypted volume, formatting it with a filesystem, and mounting it, you ensured the security of sensitive information.
 
@@ -450,8 +452,7 @@ Your organization needed to enhance the security of SSH logins by implementing t
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Install the necessary packages
 sudo apt-get install libpam-google-authenticator
 
@@ -466,6 +467,8 @@ auth required pam_google_authenticator.so
 
 # Restart the SSH service
 sudo systemctl restart ssh
+```
+
 Summary:
 In this project, you improved SSH security by implementing two-factor authentication (2FA) for user accounts. 2FA adds an extra layer of security to the login process.
 
@@ -476,8 +479,7 @@ Your organization needed to establish a secure bastion host, also known as a jum
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Configure the bastion host server
 sudo apt-get install openssh-server
 
@@ -489,6 +491,8 @@ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
 # Configure SSH to allow gateway functionality
 sudo nano /etc/ssh/sshd_config
+```
+
 Summary:
 In this project, you set up a Linux bastion host, a critical component of a secure remote access solution. The bastion host controls and logs access to internal servers.
 
@@ -499,8 +503,7 @@ Your organization required monitoring of disk space on multiple Linux servers to
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Check disk space usage
 df -h
 
@@ -508,7 +511,8 @@ df -h
 nano disk-space-monitor.sh
 
 # Schedule the script with cron
-crontab -e
+crontab -
+```
 Summary:
 This project focused on implementing disk space monitoring to prevent critical server out-of-space issues. You created a script and scheduled it with cron to provide automated alerts.
 
@@ -519,8 +523,7 @@ Your organization needed to configure firewall rules on a Linux server to contro
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Install iptables
 sudo apt-get install iptables
 
@@ -531,6 +534,8 @@ sudo iptables -A INPUT -j DROP
 
 # Save the firewall rules
 sudo apt-get install iptables-persistent
+```
+
 Summary:
 In this project, you demonstrated the capability to configure firewall rules using iptables to control incoming and outgoing network traffic on a Linux server.
 
@@ -541,8 +546,7 @@ Your organization needed to set up log rotation and management to ensure that lo
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Configure log rotation
 sudo nano /etc/logrotate.conf
 
@@ -551,6 +555,8 @@ sudo nano /etc/logrotate.d/app-logs
 
 # Test log rotation settings
 logrotate -d /etc/logrotate.conf
+```
+
 Summary:
 This project involved setting up log rotation and management to maintain an organized log history while preventing log files from occupying too much disk space.
 
@@ -561,8 +567,7 @@ Your organization required auditing of user accounts on Linux servers to track a
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Enable user auditing
 sudo nano /etc/audit/auditd.conf
 sudo service auditd restart
@@ -573,6 +578,7 @@ auditctl -a always,exit -F arch=b64 -S passwd -k passwd_changes
 
 # Review audit logs
 ausearch -k usermod_changes
+```
 
 Summary:
 In this project, you demonstrated the ability to enable user account auditing on Linux servers, enhancing security by tracking and logging changes and access.
@@ -584,8 +590,7 @@ Your organization needed to enhance security by implementing File Integrity Moni
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Install a FIM tool like Tripwire
 sudo apt-get install tripwire
 
@@ -595,6 +600,8 @@ sudo tripwire --update-policy
 
 # Check for changes in the file system
 sudo tripwire --check
+```
+
 Summary:
 In this project, you improved security by implementing File Integrity Monitoring (FIM) with Tripwire. FIM helps detect and alert on unauthorized changes to system files.
 
@@ -605,8 +612,7 @@ Your organization required central log management and analysis to monitor and re
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Install and configure the ELK Stack (Elasticsearch, Logstash, Kibana)
 sudo apt-get install elasticsearch logstash kibana
 
@@ -614,6 +620,7 @@ sudo apt-get install elasticsearch logstash kibana
 # Configure Kibana for log visualization
 
 # Forward logs from Linux servers to the ELK Stack
+```
 Summary:
 This project involved setting up a powerful log management solution using the ELK Stack to aggregate, analyze, and visualize log data, enhancing the organization's security posture.
 
@@ -624,12 +631,12 @@ Your organization wanted to harden the security of the SSH service on Linux serv
 
 Linux Commands:
 
-bash
-Copy code
+```
 # Modify SSH configuration
 sudo nano /etc/ssh/sshd_config
 
 # Implement security measures like disabling root login, using key authentication, and limiting login attempts
+```
 Summary:
 In this project, you focused on hardening SSH security to protect Linux servers from unauthorized access and attacks.
 
@@ -639,9 +646,7 @@ Description:
 Your organization needed a network intrusion detection system to monitor network traffic and detect suspicious or malicious activity.
 
 Linux Commands:
-
-bash
-Copy code
+```
 # Install Snort
 sudo apt-get install snort
 
@@ -650,6 +655,8 @@ sudo nano /etc/snort/snort.conf
 
 # Start Snort in Network Intrusion Detection mode
 sudo snort -q -A console -q -q -c /etc/snort/snort.conf
+```
+
 Summary:
 In this project, you implemented network intrusion detection using Snort, enhancing the organization's ability to detect and respond to network-based threats.
 
@@ -659,9 +666,7 @@ Description:
 Your organization needed to secure sensitive data on Linux laptops by implementing full disk encryption.
 
 Linux Commands:
-
-bash
-Copy code
+```
 # Install LUKS (Linux Unified Key Setup)
 sudo apt-get install cryptsetup
 
@@ -670,6 +675,7 @@ sudo cryptsetup --verbose --verify-passphrase luksFormat /dev/sdX
 
 # Create an encrypted partition and mount it
 sudo cryptsetup luksOpen /dev/sdX my_encrypted_partition
+```
 Summary:
 In this project, you implemented full disk encryption using LUKS to protect sensitive data on Linux laptops.
 
