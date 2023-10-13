@@ -155,8 +155,7 @@ cat /var/log/auth.log
 # Monitor real-time logs
 tail -f /var/log/syslog
 ```
-
-Summary:
+<h2> Summary: </h2>
 In this project, we delved into system log analysis, a vital aspect of cybersecurity monitoring. We examined various system logs, searched for specific keywords, and monitored real-time logs to identify potential security incidents and unusual activities. This ongoing monitoring is essential for maintaining a secure environment.
 
 <h1> Intrusion Detection with Snort </h1>
@@ -369,7 +368,7 @@ nano analyze-logs.sh
 crontab -e
 ```
 
-Summary:
+<h2> Summary: </h2>
 This project focused on setting up log analysis processes on a Linux system to monitor for unauthorized access and malware detection. By creating custom log analysis scripts and automating the analysis, you improved security monitoring capabilities.
 
 <h1> Hardening SSH Configuration </h1>
