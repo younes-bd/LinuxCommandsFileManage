@@ -65,25 +65,25 @@ I changed multiple permissions to match the level of authorization my organizati
  <br/>
 
 
- Vulnerability Scanning with Nessus
+ <h1> Vulnerability Scanning with Nessus </h1>
 
-Description:
+<h2> Description: </h2>
 As a cybersecurity analyst, you were tasked with performing a vulnerability assessment on your organization's internal network using the Nessus vulnerability scanner.
 
-Linux Commands:
+<h2> Linux Commands: </h2>
 ```
 # Start Nessus in a Docker container (if Docker is used)
 docker run -d --name nessus -p 8834:8834 -e "NESSUS_LICENSE=your-activation-code" nessus/nessus
 # Open a web browser and navigate to Nessus web interface
 # Login to the Nessus web interface, configure the scan, and initiate the vulnerability scan
 ```
-Summary:
+<h2> Summary: </h2>
 This project involved setting up and running a Nessus vulnerability scan to identify potential security issues within our organization's network. The Nessus scanner was deployed within a Docker container for ease of use. By conducting this scan, we gained insights into vulnerabilities and areas for security improvement.
 
 
-Security Patch Management
+<h1> Security Patch Management </h1>
 
-Description:
+<h2> Description: </h2>
 Your organization needs to apply security patches to a Linux server to address known vulnerabilities and improve system security.
 
 Linux Commands:
@@ -103,15 +103,16 @@ sudo apt install package-name
 # Apply kernel security updates
 sudo reboot
 ```
-Summary:
+<h2> Summary: </h2>
 In this project, we focused on enhancing system security by applying security patches to a Linux server. We began by updating the package repositories and upgrading installed packages to ensure all security patches were in place. This proactive approach helps safeguard our systems against known vulnerabilities.
 
-Security Hardening with IPTables
+<h1> Security Hardening with IPTables </h1>
 
-Description:
+<h2> Description: </h2>
 You're tasked with configuring IPTables to restrict network traffic on a Linux server. Security hardening includes allowing only necessary services and blocking others.
 
-Linux Commands:
+<h2> Linux Commands: </h2>
+
 ```
 # Allow SSH (replace xx.xx.xx.xx with your IP)
 sudo iptables -A INPUT -p tcp --dport 22 -s xx.xx.xx.xx -j ACCEPT
@@ -129,16 +130,16 @@ sudo iptables-save > /etc/iptables.rules
 # Enable IPTables on boot
 sudo systemctl enable netfilter-persistent
 ```
-
-Summary:
+<h2> Summary: </h2>
 This project focused on enhancing network security through the configuration of IPTables on a Linux server. By explicitly allowing only necessary services and blocking all other incoming traffic, we reduce the attack surface and fortify our system against potential threats.
 
-System Log Analysis
+<h1> System Log Analysis </h1>
 
-Description:
+<h2>Description:</h2>
 You've been monitoring system logs to detect unusual activities and potential security incidents. This is a critical task for a cybersecurity analyst.
 
-Linux Commands:
+<h2>Linux Commands: </h2>
+
 ```
 # Check the system logs (e.g., syslog)
 cat /var/log/syslog
@@ -156,7 +157,7 @@ tail -f /var/log/syslog
 Summary:
 In this project, we delved into system log analysis, a vital aspect of cybersecurity monitoring. We examined various system logs, searched for specific keywords, and monitored real-time logs to identify potential security incidents and unusual activities. This ongoing monitoring is essential for maintaining a secure environment.
 
-Intrusion Detection with Snort
+<h1> Intrusion Detection with Snort </h1>
 
 Description:
 You've configured Snort, an intrusion detection system, to monitor network traffic for signs of suspicious or malicious activity.
