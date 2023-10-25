@@ -473,7 +473,7 @@ auth required pam_google_authenticator.so
 sudo systemctl restart ssh
 ```
 
-<h2 >Summary: </h2>
+<h2> Summary: </h2>
 In this project, you improved SSH security by implementing two-factor authentication (2FA) for user accounts. 2FA adds an extra layer of security to the login process.
 
 <h1> Setting Up a Linux Bastion Host </h1>
@@ -931,7 +931,8 @@ This script automates the process of backing up a website's files and database, 
 <h2> Description: </h2>
 Automate the cleanup of log files in a specified directory.
 
-bash script:
+<h2> bash script: </h2>
+
 ```
 #!/bin/bash
 
@@ -1131,7 +1132,7 @@ These Bash scripts can help you automate various tasks as a system administrator
 <h2> Description: </h2>
 Automate routine system maintenance tasks, such as updating packages and cleaning up temporary files.
 
-bash script:
+<h2> bash script: </h2>
 
 ```
 #!/bin/bash
@@ -1197,7 +1198,7 @@ iptables -A INPUT -s $ip_address -j ACCEPT
 # Save the firewall rules
 iptables-save > /etc/iptables/rules.v4
 ```
-Summary:
+<h2> Summary: </h2>
 This script automates the process of adding or updating firewall rules to allow specific IP addresses.
 
 <h2> Automate Disk Space Monitoring </h2>
@@ -1221,7 +1222,7 @@ if [ $disk_usage -ge $threshold ]; then
     echo "Disk space usage is at $disk_usage%" | mail -s "Disk Space Alert" admin@example.com
 fi
 ```
-Summary:
+<h2> Summary: </h2>
 This script automates disk space monitoring and sends an email alert if disk space usage exceeds a defined threshold.
 
 
@@ -1259,7 +1260,7 @@ tar -czvf "$backup_folder.tar.gz" $backup_folder
 # Remove the original backup folder
 rm -rf $backup_folder
 ```
-Summary:
+<h2> Summary: </h2>
 This script automates the backup of important configuration files, compresses them, and stores them in a backup directory.
 
 <h1> Automate User Account Management </h1>
@@ -1343,17 +1344,18 @@ apt-get upgrade -y
 apt-get autoremove -y
 apt-get clean
 ```
-Summary:
+<h2> Summary: </h2>
 This script automates the software update process by updating package repositories, upgrading installed packages, and cleaning up the system.
 
 
-Automate Daily System Health Check
+<h1> Automate Daily System Health Check </h1>
 
-Description:
+<h2> Description: </h2>
 Automate a daily system health check to ensure system resources are within acceptable limits and generate a report.
 
-bash
-Copy code
+<h2> bash script: </h2>
+
+```
 #!/bin/bash
 
 # Daily system health check script
@@ -1376,16 +1378,18 @@ echo "Date and Time: $current_datetime" >> $log_file
 echo "CPU Usage: $cpu_usage" >> $log_file
 echo "Memory Usage: $memory_usage MB" >> $log_file
 echo "Available Disk Space: $disk_space" >> $log_file
-Summary:
+```
+<h2> Summary: </h2>
 This script automates a daily system health check and logs CPU usage, memory usage, and available disk space to a log file.
 
-Automate Log File Monitoring
+<h1> Automate Log File Monitoring </h1>
 
-Description:
+<h2> Description: </h2>
 Automate the monitoring of log files for specific events or error messages and send email notifications.
 
-bash
-Copy code
+<h2> bash script: </h2>
+
+```
 #!/bin/bash
 
 # Log file monitoring script
@@ -1404,16 +1408,19 @@ if grep -q "$error_message" $log_file; then
     # Send an email notification
     echo "Error found in log file $log_file" | mail -s "Log Error Notification" $recipient
 fi
-Summary:
+```
+<h2> Summary: </h2>
 This script automates log file monitoring for a specific error message and sends an email notification if the error is found.
 
-Automate Firewall Rule Updates
 
-Description:
+<h1> Automate Firewall Rule Updates </h1>
+
+<h2> Description: </h2>
 Automate the process of updating firewall rules to allow or deny specific IP addresses or services.
 
-bash
-Copy code
+<h2> bash script: </h2>
+
+```
 #!/bin/bash
 
 # Firewall rule update script
@@ -1426,16 +1433,18 @@ port="22"
 
 # Update firewall rule to allow the IP address and port
 iptables -A INPUT -p tcp -s $allowed_ip --dport $port -j ACCEPT
-Summary:
+```
+<h2> Summary: </h2>
 This script automates the update of firewall rules to allow a specific IP address and port.
 
-Automate System Backup
+<h1> Automate System Backup </h1>
 
-Description:
+<h2> Description: </h2>
 Automate the system backup process to create regular backups of important system files.
 
-bash
-Copy code
+<h2> bash script: </h2>
+
+```
 #!/bin/bash
 
 # System backup script
@@ -1452,26 +1461,21 @@ mkdir -p $backup_dir/$timestamp
 # Backup important system files
 cp -r /etc $backup_dir/$timestamp
 cp -r /var/www $backup_dir/$timestamp
-Summary:
+```
+<h2> Summary: </h2>
 This script automates the creation of system backups by copying important system files to a backup directory.
 
 These additional Bash scripts can help system administrators streamline routine tasks and ensure the reliability and security of their systems.
 
 
+<h1> Automate Log Rotation </h1>
 
-
-User
-give me more examples
-ChatGPT
-Certainly, here are more examples of automation Bash scripts for system administrators:
-
-Automate Log Rotation
-
-Description:
+<h2> Description: </h2>
 Automate log rotation to prevent log files from consuming too much disk space.
 
-bash
-Copy code
+<h2> bash script:</h2>
+
+```
 #!/bin/bash
 
 # Log rotation script
@@ -1492,16 +1496,18 @@ done
 
 # Create an empty log file
 touch $log_file
-Summary:
+```
+<h2> Summary: </h2>
 This script automates log rotation by moving the current log file to a backup, removing old log files, and creating a new empty log file.
 
-Automate User Account Management
+<h1> Automate User Account Management </h1>
 
-Description:
+<h2> Description: </h2>
 Automate user account creation and management based on a list of users and their access levels.
 
-bash
-Copy code
+<h2> bash script: </h2>
+
+```
 #!/bin/bash
 
 # User account management script
@@ -1516,16 +1522,18 @@ while IFS=":" read -r username access_level; do
     usermod -aG sudo $username
   fi
 done < "$user_data_file"
-Summary:
+```
+<h2> Summary: </h2>
 This script automates user account management by reading user data from a file and creating user accounts with appropriate access levels.
 
-Automate System Updates
+<h2> Automate System Updates </h2>
 
-Description:
+<h2> Description: </h2>
 Automate the process of checking for and applying system updates.
 
-bash
-Copy code
+<h2> bash script:</h2>
+
+```
 #!/bin/bash
 
 # System update script
@@ -1535,16 +1543,18 @@ sudo apt update
 
 # Upgrade system packages
 sudo apt upgrade -y
-Summary:
+```
+<h2> Summary: </h2>
 This script automates system updates by checking for updates and upgrading system packages.
 
-Automate Database Backup
+<h1> Automate Database Backup </h1>
 
-Description:
+<h2> Description: </h2>
 Automate the backup of a database, compress it, and store it with a timestamp.
 
-bash
-Copy code
+<h2> bash script:</h2>
+
+```
 #!/bin/bash
 
 # Database backup script
@@ -1562,7 +1572,8 @@ timestamp=$(date +"%Y%m%d%H%M%S")
 
 # Backup the database and compress it
 mysqldump -u $db_user -p$db_password $db_name | gzip > $backup_dir/backup_$timestamp.sql.gz
-Summary:
+```
+<h2> Summary:</h2>
 This script automates the backup of a database, compresses it, and stores it in a directory with a timestamp.
 
 
