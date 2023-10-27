@@ -1526,7 +1526,7 @@ done < "$user_data_file"
 <h2> Summary: </h2>
 This script automates user account management by reading user data from a file and creating user accounts with appropriate access levels.
 
-<h2> Automate System Updates </h2>
+<h1> Automate System Updates </h1>
 
 <h2> Description: </h2>
 Automate the process of checking for and applying system updates.
